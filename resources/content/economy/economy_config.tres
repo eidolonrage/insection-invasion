@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="EconomyConfig" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/auto_farmer_def.gd" id="1_ep0o3"]
+[ext_resource type="Script" path="res://resources/defs/economy_config.gd" id="2_n08vl"]
+
+[sub_resource type="Resource" id="Resource_2w3fa"]
+script = ExtResource("1_ep0o3")
+id = "porch_lemonade"
+display_name = "Porch Lemonade Stand"
+cost = 80
+income_per_night = 25
+
+[sub_resource type="Resource" id="Resource_vasl2"]
+script = ExtResource("1_ep0o3")
+id = "cricket_farm"
+display_name = "Backyard Cricket Farm"
+cost = 200
+income_per_night = 70
+
+[resource]
+script = ExtResource("2_n08vl")
+starting_money = 150
+home_integrity = 100
+player_health = 100
+rent_amount = 100
+rent_interval_days = 3
+desk_job_income = 60
+auto_farmers = Array[ExtResource("1_ep0o3")]([SubResource("Resource_2w3fa"), SubResource("Resource_vasl2")])

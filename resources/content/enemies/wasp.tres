@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/enemy_def.gd" id="1_3mw0a"]
+
+[resource]
+script = ExtResource("1_3mw0a")
+id = "wasp"
+display_name = "Paper Wasp"
+hp = 4
+damage = 5
+speed = 90.0
+money_reward = 4
+tier = 3
+unlocks_at_invasion_level = 2

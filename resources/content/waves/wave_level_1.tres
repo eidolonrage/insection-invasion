@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WaveDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/wave_entry.gd" id="1_gjjxx"]
+[ext_resource type="Script" path="res://resources/defs/wave_def.gd" id="2_8wb7o"]
+
+[sub_resource type="Resource" id="Resource_0fili"]
+script = ExtResource("1_gjjxx")
+enemy_id = "ant"
+count = 8
+spawn_delay_ms = 700
+
+[sub_resource type="Resource" id="Resource_at68b"]
+script = ExtResource("1_gjjxx")
+enemy_id = "roach"
+count = 3
+spawn_delay_ms = 1400
+
+[resource]
+script = ExtResource("2_8wb7o")
+invasion_level = 1
+entries = Array[ExtResource("1_gjjxx")]([SubResource("Resource_0fili"), SubResource("Resource_at68b")])

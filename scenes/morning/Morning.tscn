@@ -1,0 +1,43 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/morning/Morning.gd" id="1_8uqhg"]
+
+[node name="Morning" type="Control" unique_id=225876010]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_8uqhg")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=157178525]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=1553199314]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PhaseTitle" type="Label" parent="Margin/VBox" unique_id=1897861723]
+layout_mode = 2
+text = "MORNING — buy & deploy"
+
+[node name="ShopList" type="VBoxContainer" parent="Margin/VBox" unique_id=1155061529]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="InventoryLabel" type="Label" parent="Margin/VBox" unique_id=1288815997]
+layout_mode = 2
+text = "Owned traps: 0   Deployed: 0"
+
+[node name="DeployButton" type="Button" parent="Margin/VBox" unique_id=2140671691]
+layout_mode = 2
+text = "Deploy all owned traps"
+
+[node name="ToAfternoonButton" type="Button" parent="Margin/VBox" unique_id=1428625651]
+layout_mode = 2
+text = "Head to afternoon →"

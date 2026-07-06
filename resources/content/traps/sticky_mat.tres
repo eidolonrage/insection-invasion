@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TrapDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/trap_def.gd" id="1_ccku5"]
+
+[resource]
+script = ExtResource("1_ccku5")
+id = "sticky_mat"
+display_name = "Sticky Mat"
+cost = 25
+durability = 2
+placement = "interior"
+tags = Array[String](["physical"])

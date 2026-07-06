@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/enemy_def.gd" id="1_priey"]
+
+[resource]
+script = ExtResource("1_priey")
+id = "roach"
+display_name = "House Roach"
+hp = 5
+damage = 3
+speed = 55.0
+money_reward = 3
+tier = 2
+unlocks_at_invasion_level = 1

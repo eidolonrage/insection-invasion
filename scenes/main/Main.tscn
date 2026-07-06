@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/main/Main.gd" id="1_dc040"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud/Hud.tscn" id="2_1rhdn"]
+[ext_resource type="Script" path="res://scenes/ui/hud/Hud.gd" id="3_sjxhf"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game_over/GameOverOverlay.tscn" id="4_ko0rf"]
+[ext_resource type="Script" path="res://scenes/ui/game_over/GameOverOverlay.gd" id="5_ostsq"]
+
+[node name="Main" type="Control" unique_id=648914960]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_dc040")
+
+[node name="Body" type="VBoxContainer" parent="." unique_id=2035072715]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 0
+
+[node name="Hud" type="Control" parent="Body" unique_id=1054753347 instance=ExtResource("2_1rhdn")]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+script = ExtResource("3_sjxhf")
+
+[node name="PhaseContainer" type="Control" parent="Body" unique_id=464218655]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GameOverOverlay" type="Control" parent="." unique_id=1452340788 instance=ExtResource("4_ko0rf")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("5_ostsq")

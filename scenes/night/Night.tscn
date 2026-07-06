@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/night/Night.gd" id="1_nnapb"]
+
+[node name="Night" type="Control" unique_id=1765564867]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_nnapb")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=191331606]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=1261958622]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PhaseTitle" type="Label" parent="Margin/VBox" unique_id=960811339]
+layout_mode = 2
+text = "NIGHT — automate & sleep"
+
+[node name="FarmerList" type="VBoxContainer" parent="Margin/VBox" unique_id=313808574]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ProjectedIncomeLabel" type="Label" parent="Margin/VBox" unique_id=1130707823]
+layout_mode = 2
+text = "Projected overnight income: +$0"
+
+[node name="SleepButton" type="Button" parent="Margin/VBox" unique_id=237118272]
+layout_mode = 2
+text = "Sleep (save & advance) →"

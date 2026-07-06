@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/enemy_def.gd" id="1_jajir"]
+
+[resource]
+script = ExtResource("1_jajir")
+id = "ant"
+display_name = "Sugar Ant"
+hp = 2
+damage = 1
+speed = 40.0
+money_reward = 1

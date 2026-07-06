@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/enemy_def.gd" id="1_bk8gp"]
+
+[resource]
+script = ExtResource("1_bk8gp")
+id = "radioactive_roach"
+display_name = "Radioactive Roach"
+hp = 14
+damage = 8
+speed = 70.0
+money_reward = 12
+tier = 4
+unlocks_at_invasion_level = 4

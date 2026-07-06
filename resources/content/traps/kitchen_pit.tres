@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TrapDef" format=3]
+
+[ext_resource type="Script" path="res://resources/defs/trap_def.gd" id="1_n4rov"]
+
+[resource]
+script = ExtResource("1_n4rov")
+id = "kitchen_pit"
+display_name = "Kitchen Pit Trap"
+cost = 120
+damage = 6
+durability = 4
+placement = "interior"
+tags = Array[String](["physical", "lethal"])

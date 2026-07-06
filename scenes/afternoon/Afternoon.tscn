@@ -1,0 +1,62 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/afternoon/Afternoon.gd" id="1_ay8sx"]
+
+[node name="Afternoon" type="Control" unique_id=2047037394]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_ay8sx")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1025414472]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Margin" unique_id=830721918]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PhaseTitle" type="Label" parent="Margin/VBox" unique_id=1745852309]
+layout_mode = 2
+text = "AFTERNOON — defend or earn?"
+
+[node name="SummaryLabel" type="Label" parent="Margin/VBox" unique_id=1392456422]
+layout_mode = 2
+
+[node name="DefendButton" type="Button" parent="Margin/VBox" unique_id=1490203209]
+layout_mode = 2
+text = "DEFEND (fight, no pay)"
+
+[node name="WorkButton" type="Button" parent="Margin/VBox" unique_id=217680851]
+layout_mode = 2
+text = "WORK"
+
+[node name="OutcomePanel" type="Panel" parent="Margin/VBox" unique_id=1137301565]
+visible = false
+layout_mode = 2
+
+[node name="Margin2" type="MarginContainer" parent="Margin/VBox/OutcomePanel" unique_id=193358808]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBox2" type="VBoxContainer" parent="Margin/VBox/OutcomePanel/Margin2" unique_id=1290073337]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="OutcomeLabel" type="Label" parent="Margin/VBox/OutcomePanel/Margin2/VBox2" unique_id=1744292398]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="Margin/VBox/OutcomePanel/Margin2/VBox2" unique_id=361372922]
+layout_mode = 2
+text = "To night →"
