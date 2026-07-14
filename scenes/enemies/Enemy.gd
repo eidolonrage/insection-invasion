@@ -13,6 +13,13 @@ extends CharacterBody2D
 ## swarm taking up one cell"), inset by CELL_INSET so the body sits visibly
 ## *inside* its cell(s) rather than perfectly filling them -- this also gives
 ## clearance to pass through the door (a one-cell-wide gap).
+##
+## Enemies do NOT physically collide with the static house walls
+## (collision_mask = 0): the navmesh already keeps them out of walls, and
+## baking at agent_radius ~= the body half-width keeps the body kissing the
+## wall face without overlap. Hard wall-collision on top of that only made
+## bodies grind/pin on corners. Physics collision is reserved for future
+## gameplay objects (player, traps), never the wall layer.
 
 ## Gutter in px kept on each side of the footprint, so a 1x1 enemy is
 ## (CELL_SIZE - 2*CELL_INSET) = 36px inside a 48px cell.
@@ -75,6 +82,7 @@ func _physics_process(_delta: float) -> void:
 		return
 	if _nav.is_navigation_finished():
 		velocity = Vector2.ZERO
+		global_position = _nav.target_position
 		_state = State.OCCUPYING
 		house_grid.begin_occupy(self)
 		return

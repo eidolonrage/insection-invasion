@@ -7,6 +7,7 @@ size = Vector2(36, 36)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=495925718]
 collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_hpe7p")
 
 [node name="Visual" type="Polygon2D" parent="." unique_id=1482494194]
@@ -18,4 +19,4 @@ shape = SubResource("RectangleShape2D_k7o7a")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1505156340]
 path_desired_distance = 10.0
-target_desired_distance = 10.0
+target_desired_distance = 4.0
