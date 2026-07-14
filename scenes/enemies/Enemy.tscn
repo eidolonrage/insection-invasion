@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/enemies/Enemy.gd" id="1_hpe7p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7o7a"]
-size = Vector2(48, 48)
+size = Vector2(36, 36)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=495925718]
 collision_layer = 4
@@ -11,7 +11,11 @@ script = ExtResource("1_hpe7p")
 
 [node name="Visual" type="Polygon2D" parent="." unique_id=1482494194]
 color = Color(0.8, 0.25, 0.25, 1)
-polygon = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
+polygon = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1505156339]
 shape = SubResource("RectangleShape2D_k7o7a")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1505156340]
+path_desired_distance = 10.0
+target_desired_distance = 10.0

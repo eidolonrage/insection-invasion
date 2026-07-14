@@ -6,4 +6,4 @@ extends Node2D
 
 
 func _ready() -> void:
-	$EnemySpawner.house_target = $House
+	$EnemySpawner.house_grid = $House/HouseGrid
